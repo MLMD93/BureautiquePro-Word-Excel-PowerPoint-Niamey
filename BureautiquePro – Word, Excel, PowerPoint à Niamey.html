@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BureautiquePro – Word, Excel, PowerPoint à Niamey</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--f:'Manrope',system-ui,sans-serif;--g:linear-gradient(100deg,#AE67FA,#F49867);--bg:#040C18;--ft:#031B34;--bl:#042c54;--tx:#81AFDD;--or:#FF4820;--mx:50vw;--my:30vh;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:#fff;font-family:var(--f);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid #71E5FF;outline-offset:3px}
+.gt{background:var(--g);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;background-size:200% 100%;animation:sh 6s linear infinite}
+@keyframes sh{to{background-position:200% 0}}
+#prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--g);z-index:50}
+#spot{position:fixed;inset:0;pointer-events:none;z-index:1;background:radial-gradient(500px circle at var(--mx) var(--my),rgba(174,103,250,.16),transparent 60%)}
+section,header,footer,.cta{position:relative;z-index:2}
+nav{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;justify-content:space-between;align-items:center;padding:1rem 6vw;padding-top:calc(1rem + env(safe-area-inset-top,0px));backdrop-filter:blur(14px);background:rgba(4,12,24,.55);border-bottom:1px solid rgba(129,175,221,.12)}
+.logo{font-weight:800;font-size:20px;letter-spacing:-.04em}
+.nl{display:flex;gap:2rem;font-weight:500}
+.nl a{position:relative;opacity:.8;transition:.2s}.nl a:hover{opacity:1}
+.nl a:after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--g);transition:width .3s}.nl a:hover:after{width:100%}
+.btn{display:inline-block;background:var(--or);color:#fff;border:0;border-radius:8px;font:700 16px var(--f);padding:.8rem 1.4rem;cursor:pointer;position:relative;overflow:hidden;transition:transform .15s,box-shadow .3s;box-shadow:0 0 0 rgba(255,72,32,0)}
+.btn:hover{box-shadow:0 8px 30px rgba(255,72,32,.5)}
+.rip{position:absolute;border-radius:50%;background:rgba(255,255,255,.45);transform:scale(0);animation:rp .6s ease-out forwards;pointer-events:none}
+@keyframes rp{to{transform:scale(4);opacity:0}}
+header{min-height:100vh;display:flex;align-items:center;gap:3rem;padding:8rem 6vw 4rem;overflow:hidden}
+#cv{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.hc{flex:1;min-width:0}
+h1{font-weight:800;font-size:clamp(36px,5.6vw,72px);line-height:1.1;letter-spacing:-.04em}
+h1 span{display:inline-block;opacity:0;transform:translateY(40px) rotate(4deg);animation:up .7s cubic-bezier(.2,.9,.3,1) forwards}
+@keyframes up{to{opacity:1;transform:none}}
+.sub{font-size:clamp(16px,1.6vw,20px);line-height:1.6;color:var(--tx);margin:1.5rem 0 2rem;max-width:560px;opacity:0;animation:up .8s .9s forwards}
+.form{display:flex;max-width:520px;opacity:0;animation:up .8s 1.1s forwards}
+.form input{flex:2;min-width:0;min-height:54px;font:400 18px var(--f);background:var(--ft);border:2px solid var(--ft);color:#fff;padding:0 1rem;border-radius:8px 0 0 8px;transition:border-color .3s,box-shadow .3s}
+.form input:focus{outline:0;border-color:#AE67FA;box-shadow:0 0 0 4px rgba(174,103,250,.25)}
+.form .btn{border-radius:0 8px 8px 0;flex:1}
+#note{font-size:13px;color:#FF8A71;margin-top:.6rem;min-height:20px}
+.typ{margin-top:1.2rem;font-weight:600;color:#71E5FF;opacity:0;animation:up .8s 1.3s forwards}
+.typ b{border-right:2px solid #71E5FF;padding-right:3px;animation:bk .8s steps(1) infinite}
+@keyframes bk{50%{border-color:transparent}}
+.hv{flex:1;min-width:0;perspective:1200px}
+.win{background:var(--ft);border:1px solid rgba(129,175,221,.25);border-radius:14px;box-shadow:0 30px 80px rgba(174,103,250,.3);overflow:hidden;transition:transform .15s ease-out;transform-style:preserve-3d}
+.wt{display:flex;gap:6px;align-items:center;padding:12px 14px;background:var(--bl);font-size:12px;font-weight:700;color:var(--tx)}
+.wt i{width:10px;height:10px;border-radius:50%;background:#FF8A71}.wt i:nth-child(2){background:#F49867}.wt i:nth-child(3){background:#71E5FF;margin-right:8px}
+.sh{display:grid;grid-template-columns:1.3fr .8fr 1fr 1fr;font-size:14px;font-weight:600}
+.sh>*{padding:10px 12px;border-bottom:1px solid rgba(129,175,221,.14);border-right:1px solid rgba(129,175,221,.1);color:var(--tx);min-width:0}
+.sh .h{background:var(--bl);color:#fff}
+.sh input{background:transparent;border:0;border-bottom:1px dashed rgba(113,229,255,.5);color:#71E5FF;font:600 14px var(--f);width:100%;padding:10px 12px;border-right:1px solid rgba(129,175,221,.1)}
+.sh input:focus{outline:0;background:rgba(113,229,255,.1)}
+.sh .t{color:#fff;background:linear-gradient(90deg,rgba(174,103,250,.3),rgba(244,152,103,.3))}
+.sh .tot{grid-column:1/4;text-align:right;background:var(--bl);color:#fff}
+.bars{display:flex;align-items:flex-end;gap:14px;height:130px;padding:16px 18px 0}
+.bars i{flex:1;border-radius:6px 6px 0 0;background:var(--g);height:5%;transition:height .6s cubic-bezier(.2,.9,.3,1.2)}
+.hint{font-size:12px;color:var(--tx);padding:10px 14px;text-align:center}
+.mq{overflow:hidden;border-block:1px solid rgba(129,175,221,.15);padding:1.2rem 0;background:rgba(3,27,52,.6)}
+.mq div{display:flex;gap:3rem;width:max-content;animation:mq 22s linear infinite;font-weight:800;font-size:28px;color:transparent;-webkit-text-stroke:1px var(--tx)}
+.mq:hover div{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+.pad{padding:6rem 6vw}
+h2{font-weight:800;font-size:clamp(28px,4vw,48px);line-height:1.15;letter-spacing:-.03em;max-width:760px}
+.lead{color:var(--tx);line-height:1.7;margin-top:1rem;max-width:560px}
+.rv{opacity:0;transform:translateY(50px);transition:opacity .8s,transform .8s cubic-bezier(.2,.9,.3,1)}.rv.in{opacity:1;transform:none}
+.stats{display:flex;flex-wrap:wrap;gap:3rem;margin-top:3rem}
+.stats b{display:block;font-size:56px;font-weight:800;line-height:1}.stats span{color:var(--tx);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:3rem;perspective:1000px}
+.card{position:relative;padding:2rem 1.6rem;border-radius:16px;background:linear-gradient(160deg,var(--bl),var(--ft));border:1px solid rgba(129,175,221,.18);transition:transform .15s ease-out,border-color .3s;transform-style:preserve-3d;overflow:hidden;min-height:220px}
+.card:hover{border-color:#AE67FA}
+.card:before{content:"";position:absolute;inset:0;background:radial-gradient(250px circle at var(--gx,50%) var(--gy,0%),rgba(244,152,103,.25),transparent 60%);opacity:0;transition:opacity .3s}.card:hover:before{opacity:1}
+.card .ic{font-size:36px;display:block;margin-bottom:1rem;transform:translateZ(40px)}
+.card h3{font-weight:800;font-size:22px;letter-spacing:-.03em;transform:translateZ(30px)}
+.bar{width:38px;height:3px;background:var(--g);margin:.7rem 0}
+.card p{color:var(--tx);line-height:1.6;font-size:15px}
+.steps{margin-top:3rem;display:grid;gap:1rem;max-width:760px}
+.st{display:flex;gap:1.2rem;align-items:center;padding:1.2rem 1.4rem;border-radius:12px;background:var(--ft);border:1px solid rgba(129,175,221,.15);cursor:pointer;transition:.3s}
+.st:hover,.st.on{border-color:#71E5FF;transform:translateX(10px);background:var(--bl)}
+.st em{font-style:normal;width:42px;height:42px;border-radius:50%;background:var(--g);display:grid;place-items:center;font-weight:800;flex:none}
+.st p{color:var(--tx);font-size:14px;line-height:1.5;max-height:0;overflow:hidden;transition:max-height .4s}.st.on p{max-height:80px;margin-top:.3rem}
+.st h4{font-size:17px}
+.cta{margin:2rem 6vw 6rem;padding:3.5rem 2rem;border-radius:24px;background:linear-gradient(100deg,#AE67FA,#F49867,#AE67FA);background-size:200% 100%;animation:sh 8s linear infinite;text-align:center;color:#fff}
+.cta h3{font-size:clamp(24px,3.4vw,40px);font-weight:800;letter-spacing:-.03em;margin-bottom:1.5rem}
+.cta .btn{background:#000;font-size:18px;padding:1rem 2.2rem;border-radius:3rem}
+footer{background:var(--ft);text-align:center;padding:5rem 6vw 2rem}
+footer h2{margin:0 auto 2.5rem}
+footer p{font-size:12px;margin-top:3rem;opacity:.8}
+@media(max-width:1000px){.nl{display:none}header{flex-direction:column;padding-top:7rem}.hv{width:100%}}
+@media(max-width:550px){.form{flex-direction:column;gap:.6rem}.form input,.form .btn{border-radius:8px}.nav .btn{display:none}.stats b{font-size:44px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}h1 span,.sub,.form,.typ,.rv{opacity:1;transform:none}}
+</style></head><body>
+<div id="prog"></div><div id="spot"></div>
+<nav class="nav"><div class="logo gt">BureautiquePro</div>
+<div class="nl"><a href="#demo">Essaie</a><a href="#prog2">Programme</a><a href="#methode">Méthode</a></div>
+<a class="btn" href="#contact">Je m'inscris</a></nav>
+
+<header id="home"><canvas id="cv"></canvas>
+<div class="hc"><h1 class="gt" id="h1">Transforme ton ordinateur en machine à résultats</h1>
+<p class="sub">Word, Excel, PowerPoint : une formation 100 % pratique à Niamey. Tu fais de vrais documents dès la première séance.</p>
+<form class="form" id="f"><input id="tel" type="tel" placeholder="Ton numéro WhatsApp" required aria-label="Numéro WhatsApp"><button class="btn" type="submit">Je m'inscris</button></form>
+<div id="note" role="status"></div>
+<div class="typ">Tu apprends à faire : <b id="ty"></b></div></div>
+<div class="hv"><div class="win" id="tilt"><div class="wt"><i></i><i></i><i></i>Stock.xlsx</div>
+<div class="sh" id="sh"></div><div class="bars" id="bars"></div><div class="hint">👆 Modifie les quantités et les prix : tout se recalcule en direct</div></div></div>
+</header>
+
+<div class="mq"><div id="mqi"></div></div>
+
+<section class="pad" id="demo"><h2 class="rv">Ce que tu fais en <span class="gt">quelques séances</span></h2>
+<p class="lead rv">Pas de théorie qui endort. Chaque séance se termine avec un document que tu peux utiliser dans ta vie réelle.</p>
+<div class="stats rv"><div><b class="gt" data-n="3">0</b><span>logiciels maîtrisés</span></div><div><b class="gt" data-n="1">0</b><span>livrable à chaque séance</span></div><div><b class="gt" data-n="100" data-s="%">0</b><span>de pratique</span></div></div></section>
+
+<section class="pad" id="prog2" style="padding-top:0"><h2 class="rv">Trois outils. Survole les cartes.</h2>
+<div class="grid">
+<div class="card rv"><span class="ic">📝</span><h3>Word</h3><div class="bar"></div><p>CV, lettres, rapports, mise en page propre, table des matières, impression sans surprise.</p></div>
+<div class="card rv"><span class="ic">📊</span><h3>Excel</h3><div class="bar"></div><p>Formules, tableaux, graphiques, suivi de stock et de budget. Le calcul se fait tout seul.</p></div>
+<div class="card rv"><span class="ic">🎬</span><h3>PowerPoint</h3><div class="bar"></div><p>Des diapositives claires qui soutiennent ton discours au lieu de le recopier.</p></div>
+</div></section>
+
+<section class="pad" id="methode" style="padding-top:0"><h2 class="rv">La méthode, étape par étape</h2>
+<div class="steps rv" id="steps">
+<div class="st on"><em>1</em><div><h4>Tu pars de ton niveau</h4><p>Débutant complet ou déjà à l'aise : on commence là où tu en es.</p></div></div>
+<div class="st"><em>2</em><div><h4>Tu pratiques sur un cas réel</h4><p>Facture, liste d'élèves, suivi de ventes, dossier de candidature.</p></div></div>
+<div class="st"><em>3</em><div><h4>Tu repars avec ton document</h4><p>Chaque séance se termine par un livrable prêt à être utilisé.</p></div></div>
+<div class="st"><em>4</em><div><h4>Tu poses tes questions après</h4><p>Une difficulté une fois rentré chez toi ? Tu peux écrire.</p></div></div>
+</div></section>
+
+<div class="cta rv" id="contact"><h3>Prêt à ne plus galérer avec ton ordinateur ?</h3><a class="btn" href="#home">Réserver ma place</a></div>
+<footer><h2 class="gt">Commence aujourd'hui, ton futur toi te dira merci.</h2><div class="logo gt">BureautiquePro</div><p>Niamey, Niger · © 2026 BureautiquePro</p></footer>
+
+<script>
+// Mets ton vrai numéro, format international sans + (ex : 22790000000)
+const WHATSAPP="227XXXXXXXX";
+const $=s=>document.querySelector(s),RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+// titre mot par mot
+const h=$('#h1');h.innerHTML=h.textContent.split(' ').map((w,i)=>`<span style="animation-delay:${.1+i*.09}s">${w}</span>`).join(' ');
+// barre de progression + spotlight
+addEventListener('scroll',()=>{const d=document.documentElement;$('#prog').style.width=(scrollY/(d.scrollHeight-innerHeight)*100)+'%'},{passive:true});
+addEventListener('pointermove',e=>{document.documentElement.style.setProperty('--mx',e.clientX+'px');document.documentElement.style.setProperty('--my',e.clientY+'px')});
+// texte qui se tape
+const words=['un CV impeccable','une facture avec formules','un graphique clair','une présentation qui convainc'];let wi=0,ci=0,del=false;
+(function tp(){const t=words[wi];$('#ty').textContent=t.slice(0,ci);if(!del&&ci===t.length){del=true;return setTimeout(tp,1400)}if(del&&ci===0){del=false;wi=(wi+1)%words.length}ci+=del?-1:1;setTimeout(tp,del?30:70)})();
+// marquee
+$('#mqi').innerHTML=Array(2).fill(['Word','Excel','PowerPoint','Windows','PDF','Formules','Graphiques','Mise en page'].map(x=>`<span>${x}</span>`).join('')).join('');
+// tableur vivant
+const rows=[['Riz 25 kg',12,18000],['Huile 5 L',8,6500],['Sucre 50 kg',5,24000]];
+const sh=$('#sh');sh.innerHTML='<div class="h">Produit</div><div class="h">Qté</div><div class="h">Prix</div><div class="h">Total</div>'+rows.map((r,i)=>`<div>${r[0]}</div><input type="number" min="0" value="${r[1]}" data-i="${i}" data-k="1" aria-label="Quantité ${r[0]}"><input type="number" min="0" value="${r[2]}" data-i="${i}" data-k="2" aria-label="Prix ${r[0]}"><div class="t" id="t${i}"></div>`).join('')+'<div class="tot">Total général</div><div class="t" id="gt"></div>';
+const fmt=n=>n.toLocaleString('fr-FR');
+function calc(){const tt=rows.map(r=>r[1]*r[2]),mx=Math.max(...tt,1);tt.forEach((v,i)=>$('#t'+i).textContent=fmt(v));$('#gt').textContent=fmt(tt.reduce((a,b)=>a+b,0));$('#bars').innerHTML=tt.map(()=>'<i></i>').join('');requestAnimationFrame(()=>requestAnimationFrame(()=>document.querySelectorAll('#bars i').forEach((b,i)=>b.style.height=Math.max(5,tt[i]/mx*100)+'%')))}
+sh.addEventListener('input',e=>{const t=e.target;if(t.dataset.i){rows[t.dataset.i][t.dataset.k]=+t.value||0;calc()}});calc();
+// tilt 3D
+function tilt(el,max){el.addEventListener('pointermove',e=>{if(RM)return;const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;el.style.transform=`rotateY(${(x-.5)*max}deg) rotateX(${(.5-y)*max}deg)`;el.style.setProperty('--gx',x*100+'%');el.style.setProperty('--gy',y*100+'%')});el.addEventListener('pointerleave',()=>el.style.transform='')}
+tilt($('#tilt'),10);document.querySelectorAll('.card').forEach(c=>tilt(c,16));
+// révélation au scroll + compteurs
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('in');e.target.querySelectorAll('[data-n]').forEach(c=>{const n=+c.dataset.n,s=c.dataset.s||'';let k=0;const st=performance.now();(function f(t){k=Math.min(1,(t-st)/1400);c.textContent=Math.round(n*(1-Math.pow(1-k,3)))+s;if(k<1)requestAnimationFrame(f)})(st)});io.unobserve(e.target)}),{threshold:.2});
+document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%3)*.1+'s';io.observe(el)});
+// étapes dépliables
+document.querySelectorAll('.st').forEach(s=>s.onclick=()=>{document.querySelectorAll('.st').forEach(x=>x.classList.remove('on'));s.classList.add('on')});
+// ripple
+document.querySelectorAll('.btn').forEach(b=>b.addEventListener('click',e=>{const r=b.getBoundingClientRect(),s=document.createElement('span');s.className='rip';s.style.cssText=`width:40px;height:40px;left:${e.clientX-r.left-20}px;top:${e.clientY-r.top-20}px`;b.appendChild(s);setTimeout(()=>s.remove(),600)}));
+// particules
+const cv=$('#cv'),cx=cv.getContext('2d');let W,H,P=[],m={x:-999,y:-999};
+function rs(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight;P=Array.from({length:Math.min(90,W/14|0)},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4}))}
+rs();addEventListener('resize',rs);
+cv.parentElement.addEventListener('pointermove',e=>{const r=cv.getBoundingClientRect();m.x=e.clientX-r.left;m.y=e.clientY-r.top});
+(function dr(){cx.clearRect(0,0,W,H);for(const p of P){const dx=p.x-m.x,dy=p.y-m.y,d=Math.hypot(dx,dy);if(d<140&&!RM){p.x+=dx/d*1.6;p.y+=dy/d*1.6}p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;cx.fillStyle='rgba(174,103,250,.8)';cx.beginPath();cx.arc(p.x,p.y,2,0,6.3);cx.fill()}
+for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){const d=Math.hypot(P[i].x-P[j].x,P[i].y-P[j].y);if(d<110){cx.strokeStyle=`rgba(129,175,221,${.25*(1-d/110)})`;cx.beginPath();cx.moveTo(P[i].x,P[i].y);cx.lineTo(P[j].x,P[j].y);cx.stroke()}}
+requestAnimationFrame(dr)})();
+// formulaire WhatsApp
+$('#f').onsubmit=e=>{e.preventDefault();const n=$('#note');if(WHATSAPP.includes('X')){n.textContent="Démo : ajoute ton numéro WhatsApp dans le code pour activer l'inscription.";return}
+open('https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent("Bonjour, je veux m'inscrire à la formation bureautique. Mon numéro : "+$('#tel').value),'_blank','noopener');n.textContent="On t'ouvre WhatsApp pour confirmer."};
+</script></body></html>
